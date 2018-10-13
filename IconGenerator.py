@@ -81,7 +81,8 @@ def main():
         name = name.decode() + '.png'
         if(len(name) > 30):
             name = name[0:30] + '.png'
-
+        if(name == '.png'):
+            name = 'THIS_IS_AN_EMPTY_STRING_SO_I_MADE_THIS_A_SPECIFIC_SAVED_IMAGE.png'
         #Makes the path the folder and saves the image to folder
         fullpath = os.path.join(final_directory, name)
         img.save(fullpath)
